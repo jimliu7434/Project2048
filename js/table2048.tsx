@@ -5,9 +5,7 @@
 class TableGrid extends React.Component<IGridProps, any> {
     render() {
         return( 
-            <div style={{backgroundColor:"yellow"}}>
-               [ {this.props.index_x} : {this.props.index_y} ]- {this.props.value}
-            </div>
+            <span>{"　"}{this.props.value}{"　"}</span>
         );
     }
 }
@@ -24,7 +22,7 @@ class TableRow extends React.Component<IRowProps, any> {
                 <TableGrid index_x={this.grid0.index_x} index_y={this.grid0.index_y} value={this.grid0.value} />
                 <TableGrid index_x={this.grid1.index_x} index_y={this.grid1.index_y} value={this.grid1.value} />
                 <TableGrid index_x={this.grid2.index_x} index_y={this.grid2.index_y} value={this.grid2.value} />
-                <TableGrid index_x={this.grid3.index_x} index_y={this.grid3.index_y} value={this.grid3.value} /><br/>
+                <TableGrid index_x={this.grid3.index_x} index_y={this.grid3.index_y} value={this.grid3.value} /><br/><br/>
             </div>
         );
     }
@@ -37,7 +35,7 @@ function GenNewGrids(index_x:number) {
         let rtnGrid ={
             index_x : index_x,
             index_y : i,
-            value : 0
+            value : Math.pow(2, i + 1)
         };
 
         rtn[i] = rtnGrid;       
