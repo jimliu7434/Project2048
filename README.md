@@ -1,1 +1,1 @@
-"# Project2048" 
+Starter Project for Reactjs in typescript.
